@@ -9,18 +9,17 @@ import Foundation
 
 open class MazeGame {
     var maze:Maze
-    var player:Player
+    var player:Player?
 
     init(){
         maze = MazeGame.createMaze()
-        player = Player()
     }
 
     private static func createMaze() -> Maze {
         let aMaze = Maze()
         let r1 = Room(roomNo: 1)
         let r2 = Room(roomNo: 2)
-        let theDoor = Door(room1: r1, room2: r2)
+        let theDoor = Door(r1, r2)
 
         aMaze.addRoom(room: r1)
         aMaze.addRoom(room: r2)
@@ -61,8 +60,11 @@ open class MazeGame {
     }
 
     func start() {
+        guard let player else {
+            return
+        }
         print("A player start at room 1")
-        player.location = maze.room(roomNumber: 1)
+        player.location = maze.room(roomNumber: 1) ?? Room(roomNo: 0)
         go(direction: .east)
         go(direction: .north)
         openDoor(direction: .east)
@@ -71,15 +73,22 @@ open class MazeGame {
 
 
     func go(direction:Direction) {
+        guard let player else {
+            return
+        }
         print(direction)
-        if let side = player.location?.getSide(direction: direction) {
+        if let side = player.location.getSide(direction: direction) {
             side.enter(player: player)
             print(side)
         }
         print(player)
     }
     func openDoor(direction:Direction) {
-        if let door = player.location?.getSide(direction: .east)  as? Door {
+        guard let player else {
+            return
+        }
+
+        if let door = player.location.getSide(direction: .east)  as? Door {
             door.open()
             print(door)
         }

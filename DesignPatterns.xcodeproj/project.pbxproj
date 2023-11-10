@@ -19,6 +19,10 @@
 		7611E8402AE5CD4A00CF1533 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7611E83F2AE5CD4A00CF1533 /* PieChartView.swift */; };
 		7611E8432AE5D77800CF1533 /* TableChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7611E8422AE5D77800CF1533 /* TableChartView.swift */; };
 		7614DA762AE80A3D002BD489 /* MVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7614DA752AE80A3D002BD489 /* MVC.swift */; };
+		762E7F4C2AFD016900C8620D /* EnchantedMazeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E7F4B2AFD016900C8620D /* EnchantedMazeFactory.swift */; };
+		762E7F4F2AFD028700C8620D /* EnchantedRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E7F4E2AFD028700C8620D /* EnchantedRoom.swift */; };
+		762E7F512AFD02DC00C8620D /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E7F502AFD02DC00C8620D /* Spell.swift */; };
+		762E7F532AFD03B700C8620D /* DoorNeedingSpell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E7F522AFD03B700C8620D /* DoorNeedingSpell.swift */; };
 		7632EA922AE9492200E2149C /* CompositePanelFactoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7632EA912AE9492200E2149C /* CompositePanelFactoryView.swift */; };
 		7632EA942AE9556100E2149C /* PieChartViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7632EA932AE9556100E2149C /* PieChartViewFactory.swift */; };
 		7640D6182AF58DCF00670EE6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7640D6172AF58DCF00670EE6 /* Player.swift */; };
@@ -80,6 +84,10 @@
 		7611E83F2AE5CD4A00CF1533 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		7611E8422AE5D77800CF1533 /* TableChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableChartView.swift; sourceTree = "<group>"; };
 		7614DA752AE80A3D002BD489 /* MVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVC.swift; sourceTree = "<group>"; };
+		762E7F4B2AFD016900C8620D /* EnchantedMazeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnchantedMazeFactory.swift; sourceTree = "<group>"; };
+		762E7F4E2AFD028700C8620D /* EnchantedRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnchantedRoom.swift; sourceTree = "<group>"; };
+		762E7F502AFD02DC00C8620D /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		762E7F522AFD03B700C8620D /* DoorNeedingSpell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorNeedingSpell.swift; sourceTree = "<group>"; };
 		7632EA912AE9492200E2149C /* CompositePanelFactoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositePanelFactoryView.swift; sourceTree = "<group>"; };
 		7632EA932AE9556100E2149C /* PieChartViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewFactory.swift; sourceTree = "<group>"; };
 		7640D6172AF58DCF00670EE6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -271,6 +279,17 @@
 			path = MVC;
 			sourceTree = "<group>";
 		};
+		762E7F4D2AFD026100C8620D /* enchanted */ = {
+			isa = PBXGroup;
+			children = (
+				762E7F4B2AFD016900C8620D /* EnchantedMazeFactory.swift */,
+				762E7F4E2AFD028700C8620D /* EnchantedRoom.swift */,
+				762E7F502AFD02DC00C8620D /* Spell.swift */,
+				762E7F522AFD03B700C8620D /* DoorNeedingSpell.swift */,
+			);
+			path = enchanted;
+			sourceTree = "<group>";
+		};
 		7643CD252AE71BEE00C30520 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +309,7 @@
 		767EB4482AFBBCC500065942 /* AbstractFactory */ = {
 			isa = PBXGroup;
 			children = (
+				762E7F4D2AFD026100C8620D /* enchanted */,
 				767EB4492AFBBCC500065942 /* MazeFactory.swift */,
 			);
 			path = AbstractFactory;
@@ -458,7 +478,9 @@
 				7611E8102AE5BF5800CF1533 /* BarChartView.swift in Sources */,
 				76DA80172AEFDA5E005A6C38 /* ASCIIConverter.swift in Sources */,
 				76B55D482AE6991D00B743C3 /* PanelCompositeView.swift in Sources */,
+				762E7F4C2AFD016900C8620D /* EnchantedMazeFactory.swift in Sources */,
 				760028882AEA87290056F915 /* TableChartViewFactory.swift in Sources */,
+				762E7F4F2AFD028700C8620D /* EnchantedRoom.swift in Sources */,
 				7611E8432AE5D77800CF1533 /* TableChartView.swift in Sources */,
 				7611E8402AE5CD4A00CF1533 /* PieChartView.swift in Sources */,
 				76BC388A2AF3D33F0022E4A7 /* MapSite.swift in Sources */,
@@ -482,7 +504,9 @@
 				7632EA942AE9556100E2149C /* PieChartViewFactory.swift in Sources */,
 				76BC388C2AF3D3BC0022E4A7 /* Room.swift in Sources */,
 				76DA801D2AEFE731005A6C38 /* SwiftUITextConverter.swift in Sources */,
+				762E7F512AFD02DC00C8620D /* Spell.swift in Sources */,
 				76BC38882AF3D2F10022E4A7 /* Direction.swift in Sources */,
+				762E7F532AFD03B700C8620D /* DoorNeedingSpell.swift in Sources */,
 				76BC38902AF3DBD90022E4A7 /* Door.swift in Sources */,
 				7632EA922AE9492200E2149C /* CompositePanelFactoryView.swift in Sources */,
 			);

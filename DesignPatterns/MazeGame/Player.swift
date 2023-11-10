@@ -10,10 +10,10 @@ import Foundation
 class Player: CustomStringConvertible{
 
 
-    var location:Room?
+    var location:Room
     var hurtNoseCount:Int = 0
 
-    init(location: Room? = nil, hurtNoseCount: Int = 0) {
+    init(location: Room, hurtNoseCount: Int = 0) {
         self.location = location
         self.hurtNoseCount = hurtNoseCount
     }

@@ -8,11 +8,11 @@
 import Foundation
 
 class Door: MapSite {
-    private let room1:Room
-    private let room2:Room
+    let room1:Room
+    let room2:Room
     private(set) var isOpen:Bool = false
 
-    init(room1: Room, room2:Room) {
+    init(_ room1: Room,_ room2:Room) {
         self.room1 = room1
         self.room2 = room2
     }
@@ -27,13 +27,11 @@ class Door: MapSite {
             return
         }
 
-        if let location = player.location {
-            otherSideFrom(room: location)
-                .enter(player: player)
-        }
+        otherSideFrom(room: player.location)
+            .enter(player: player)
     }
 
-    func open() {
+    func open(player:Player) {
         isOpen = true
     }
 }

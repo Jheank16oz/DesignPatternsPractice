@@ -12,6 +12,6 @@ class MazeFactory {
     }
 
     func makeDoor(r1: Room, r2: Room) -> Door {
-        return Door(room1: r1, room2: r2)
+        return Door(r1, r2)
     }
 }
